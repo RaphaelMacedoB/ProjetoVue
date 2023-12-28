@@ -16,6 +16,8 @@ export default{
         setTimeout(() => {
             this.nome = "Raphael"
     }, 1000);
+
+        this.lifeCycle()
     },
     mounted() {
         setTimeout(() => {
@@ -23,5 +25,10 @@ export default{
             this.nome = "Pedro"
     }, 2000);
     },
+    methods:{
+        lifeCycle(){
+            console.log("Executou")
+        }
+    }
 }
 </script>
