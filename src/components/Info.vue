@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>{{ email }}</p>
         <p v-if="esta_trabalhando">Estou trabalhando no momento</p>
         <p v-else>Não estou trabalhando</p>   
         <p>Utilizo as seguintes tecnologias para back-end:</p>
@@ -30,9 +31,7 @@ export default {
     },
     data() {
             return {
-            esta_trabalhando: false,
             mostrar_email: false,
-            email: "faeldojo@gmail.com",
             meu_link: "https://google.com",
             textoBotao: "Mostrar e-mail",
             backend_technologies: ["JavaScript","PHP","Python"],
@@ -53,6 +52,10 @@ export default {
                 this.textoBotao = "Esconder e-mail"
             }
         }
+    },
+    props:{
+        email: String,
+        esta_trabalhando: Boolean
     }
 }
 </script>
